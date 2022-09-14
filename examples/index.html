@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cloak.js | Cloaking Library</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    }
+
+    body {
+      margin-left: 20px;
+    }
+
+    .button {
+      width: 120px;
+      height: 75px;
+      display: display;
+      justify-content: center;
+      background-color: #3b3fb0;
+      color: white;
+      font-weight: bold;
+      border: none; border-radius: 25px;
+      cursor: pointer;
+      -webkit-transition: -webkit-transform 0.4s;
+      transition: transform 0.4s;
+      margin-top: 20px;
+    }
+
+    .button:hover {
+      -webkit-transform: scale(1.1) rotate(0.01deg);
+      transform: scale(1.1);
+      display: inline-block;
+    }
+
+    .content input {
+      margin-left: 0px;
+      border: 3px solid #3b3fb0;
+      border-radius: 10px;
+    }
+
+    .usage pre {
+      pointer-events: none;
+
+      margin: 0px;
+      outline: 1px solid black;
+      width: 270px;
+      background-color: #262626;
+      color: white;
+    }
+  </style>
+  <!--Cloak.js-->
+  <script src="https://Cloakjs.jimmynuetron.repl.co/cloak.js"></script>
+</head>
+
+<body>
+  <h1>Cloak.js</h1>
+  <p>The all in one library for tab cloaking</p>
+
+  <div class="content">
+    <h3>Tab Cloak Config</h3>
+    <input placeholder="https://google.com/">
+  </div>
+
+  <button class="button">
+    Enable Cloak
+  </button>
+
+  <div class="usage">
+    <h1>Example Usage</h1>
+
+    <h2>Add This To head</h2>
+    <pre
+      style="width: 500px;"><code>&lt;script src="https://cloakjs.jimmynuetron.repl.co/cloak.js"&gt;&lt;/script&gt;</code></pre>
+    <pre style="margin-top: 20px;"><code class="language-js">
+var cloaker = new TabCloak({
+  url: 'https://google.com/'
+});
+cloaker.main();
+    </code></pre>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
