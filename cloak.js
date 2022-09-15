@@ -9,6 +9,7 @@ class TabCloak {
     var response = await fetch(url);
     var title = await response.text();
     document.title = title;
+    return title;
   }
 
   favicon() {
@@ -23,7 +24,9 @@ class TabCloak {
   }
 
   main() {
-    this.title();
-    this.favicon();
+    return {
+      title: await this.title(),
+      favicon: this.favicon()
+    }
   }
 }
