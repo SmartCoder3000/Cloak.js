@@ -21,6 +21,7 @@ class TabCloak {
       document.getElementsByTagName('head')[0].appendChild(link);
     }
     link.href = url;
+    return url;
   }
 
   main() {
